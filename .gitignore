@@ -1,0 +1,18 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies  
+node_modules/
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+
+# Claude
+.claude/
+
+# Dist
+dist/
+dist-ssr/
