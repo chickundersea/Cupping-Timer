@@ -1,48 +1,26 @@
 # CuppingTimer
 
-This template should help get you started developing with Vue 3 in Vite.
+一個為了咖啡杯測比賽所設計的計時器。
 
-## Recommended IDE Setup
+基本概念為：按了開始之後，每分鐘有一個提示音，另外在四分鐘、六分鐘、十分鐘會有一個特別的提示音
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+適用於杯測比賽的練習，不同聲音提示用來提醒參賽者時間過了多久和剩下多少時間
 
-## Recommended Browser Setup
+## Phase 1
+- 正數計時器（00:00 開始）
+- 開始/停止/重置按鈕  
+- 每分鐘提示音
+- 4、6、10 分鐘特別提示音
+- 歷史紀錄（關掉瀏覽器就清除）
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Phase 2 （陸續更新）
+- 會員登入
+- 紀錄綁定會員
+- 自訂音檔上傳
+- 更多音效控制
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+### 技術棧
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+- Vue
+- TypeScript
