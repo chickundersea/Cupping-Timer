@@ -17,10 +17,10 @@ export function useTimer() {
 function start() {
     if (status.value === 'running') return;
     status.value = 'running';
-    if (intervalId){
-        clearInterval(intervalId);
-        intervalId = null;
-    }
+    intervalId = setInterval(() => {
+        seconds.value += 1;
+    }, 1000);
+}
 
 function stop() {
     if (status.value !== 'running') return;
@@ -37,4 +37,27 @@ function reset() {
     status.value = 'idle'
   }
 
-}}
+ function saveSession() {
+    if (seconds.value === 0) return
+
+    const session: TimerSession = {
+      id: Date.now(),
+      duration: seconds.value,
+      timestamp: new Date()
+    }
+
+    sessions.value.unshift(session)
+    reset()
+  }
+
+  return {
+    seconds,
+    status,
+    sessions,
+    displayTime,
+    start,
+    stop,
+    reset,
+    saveSession
+  }
+}
