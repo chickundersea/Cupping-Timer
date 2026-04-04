@@ -17,7 +17,7 @@ export function useTimer() {
 function start() {
     if (status.value === 'running') return;
     status.value = 'running';
-    intervalId = setInterval(() => {
+    intervalId = window.setInterval(() => {
         seconds.value += 1;
     }, 1000);
 }
